@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "ab8ad2b4-4d47-466e-82f5-aa6b94a9b974",
+		"name": "Uleska",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Start Logger Task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "PING"
+				},
+				"url": {
+					"raw": "http://localhost:8081/startLoggerTask",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"startLoggerTask"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Stop Logger Task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "PING"
+				},
+				"url": {
+					"raw": "http://localhost:8081/stopLoggerTask",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"stopLoggerTask"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Start Ping Task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/startPingTask",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"startPingTask"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Stop Ping Task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/stopPingTask",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"stopPingTask"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Start Weather Task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/startWeatherTask",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"startWeatherTask"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Stop Weather Task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/stopWeatherTask",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"stopWeatherTask"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Tasks",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/getAllRunningTasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"getAllRunningTasks"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
