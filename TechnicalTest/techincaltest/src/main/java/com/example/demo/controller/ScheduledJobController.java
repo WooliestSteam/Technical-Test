@@ -16,6 +16,20 @@ import com.example.demo.scheduledtasks.WeatherTask;
 @RestController
 public class ScheduledJobController {
 	
+	// SOME NOTES ABOUT THE FOLLOWING CLASS LOGIC
+	
+	// Using ScheduledAnnotationBeanPostProcessor to control the scheduled tasks.
+	// This class autodetects any of the methods in the task classes which has the annotation @Scheduled 
+	// This in turn then automatically handles the running of those methods through the in built task scheduler that comes with this class.
+	
+	// Using the postProcessAfterInitialization method which comes from the BeanPostProcessor interface through the ScheduledAnnotationBeanPostProcessor class.
+	// This method allows me to handle the creation of new bean instances which is helpful in this case as I want to "resume/create a new instance" of a scheduled task.
+	
+	// Using the postProcessBeforeDestruction method which comes from the BeanPostProcessor interface through the ScheduledAnnotationBeanPostProcessor class.
+	// This method handles the destruction of beans or in this case for this example, the "pausing" of beans. When I want to resume a task I will simply create a new bean instance.
+
+	// Both of these methods take two params, 1st which is the actual bean I want to create/destroy and 2nd is a String bean name, this param is never used however so I have left this blank in the class.
+	
     // ===========================================
     // Private Members
     // ===========================================
